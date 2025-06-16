@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_calendar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAF8F5"
+    android:padding="16dp">
+
+    <!-- 상단 날짜 선택 텍스트 -->
+    <TextView
+        android:id="@+id/text_selected_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2025년 6월 14일"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:layout_gravity="center"
+        android:drawableRight="@drawable/ic_arrow_down"
+        android:drawablePadding="8dp"
+        android:background="@drawable/bg_date_selector"
+        android:gravity="center" />
+
+    <!-- 기록 리스트 (RecyclerView) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_walk_logs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:paddingBottom="16dp" />
+
+</LinearLayout>
+
+

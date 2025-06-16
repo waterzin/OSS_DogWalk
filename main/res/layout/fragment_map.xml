@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 배경 지도 이미지 -->
+    <ImageView
+        android:id="@+id/image_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample_map" /> <!-- 샘플 지도 이미지로 대체 -->
+
+    <ImageView
+        android:id="@+id/marker_1"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_marker"
+        android:layout_marginTop="410dp"
+        android:layout_marginStart="213dp" />
+    <!-- 검색창 -->
+    <EditText
+        android:id="@+id/edit_search"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/search_background"
+        android:hint="위치 검색"
+        android:paddingStart="16dp"
+        android:drawableEnd="@drawable/ic_close"
+        android:layout_alignParentTop="true" />
+
+    <!-- 장소 카드 -->
+    <LinearLayout
+        android:id="@+id/place_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_card_bg"
+        android:padding="16dp"
+        android:layout_margin="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp">
+
+            <!-- 장소 이름 -->
+            <TextView
+                android:id="@+id/text_place_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="영남대"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+            <!-- 북마크 아이콘 -->
+            <ImageView
+                android:id="@+id/ic_bookmark"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_bookmark_outline"
+                android:contentDescription="북마크 아이콘" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/image_place"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"
+                android:background="@drawable/rounded_image"
+                android:src="@drawable/sample_place" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/text_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="경상북도 경산시 대학로 280"
+                    android:textSize="14sp"
+                    android:textColor="#666" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:id="@+id/button_view_reviews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF6E00"
+                        android:text="리뷰보기"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/button_write_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#FF6E00"
+                        android:text="리뷰쓰기"
+                        android:textSize="12sp"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

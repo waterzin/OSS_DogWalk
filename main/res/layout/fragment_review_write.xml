@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFCF9">
+
+    <!-- 상단바 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title_write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="리뷰 쓰기"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/text_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="등록"
+            android:textColor="#3366FF"
+            android:textSize="16sp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- 본문 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp">
+
+        <!-- 평점 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="평점"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginTop="24dp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1.0"
+        android:rating="0"
+        android:layout_gravity="center_horizontal"
+        android:progressDrawable="@drawable/custom_ratingbar" />
+
+        <!-- 세부내용 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="세부내용"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/edit_detail"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@android:drawable/editbox_background"
+            android:hint="내용 입력"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:gravity="top|start"
+            android:inputType="textMultiLine" />
+    </LinearLayout>
+</LinearLayout>

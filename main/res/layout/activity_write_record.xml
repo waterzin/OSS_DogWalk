@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFDFB">
+
+    <!-- 상단 날짜 및 저장 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2025년 05월 9일"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/text_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="저장"
+            android:textColor="#3F51B5"
+            android:textSize="16sp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="4dp"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+    <!-- 산책 요약 박스 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center">
+
+    <!-- 산책시간 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:text="산책시간"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="12sp"/>
+        <TextView
+            android:id="@+id/text_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="34:04"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#F28B20"/>
+    </LinearLayout>
+
+    <!-- 걸음 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:text="걸음"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="12sp"/>
+        <TextView
+            android:id="@+id/text_steps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3,714"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#F28B20"/>
+    </LinearLayout>
+
+    <!-- 거리 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="거리"
+            android:textSize="12sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_distance"
+            android:text="2.2km"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#F28B20"/>
+    </LinearLayout>
+</LinearLayout>
+
+    <!-- 지도 -->
+    <ImageView
+    android:id="@+id/image_map"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/sample_map"
+    android:layout_marginBottom="16dp" />
+
+    <!-- 리뷰 입력 -->
+    <EditText
+    android:id="@+id/edit_record"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:hint="내용 입력"
+    android:gravity="top"
+    android:background="@android:drawable/editbox_background"
+    android:padding="12dp"
+    android:inputType="textMultiLine"/>
+</LinearLayout>
